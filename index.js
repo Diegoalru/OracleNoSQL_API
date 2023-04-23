@@ -7,7 +7,6 @@ dotenv.config();
 const { NoSQLClient, Region } = OracleNoSQL;
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /*****************************************
@@ -21,7 +20,7 @@ app.use(express.json());
 let client = getConnection();
 
 /**
- * Create and return an instance of a NoSQLCLient object.
+ * Create and return an instance of a NoSQLClient object.
  * @returns {NoSQLClient} A NoSQLClient object
  */
 function getConnection() {
